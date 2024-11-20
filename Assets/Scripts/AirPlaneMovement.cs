@@ -9,7 +9,7 @@ public class AirPlaneMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        // Initialization logic, if needed
     }
 
     // Update is called once per frame
