@@ -1,10 +1,11 @@
- using UnityEngine;
+using UnityEngine;
 
 public class AirPlaneMovement : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("speed of the airplane when move")]
-    public float speed = 5f; 
+    [Tooltip("Speed of the airplane when it moves")]
+    public float speed = 5f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,11 +15,11 @@ public class AirPlaneMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //to take the movement form the keyBoard
+        // To take the movement input from the keyboard
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
 
-        // to move the air plane
+        // To move the airplane
         Vector3 movement = new Vector3(moveX, moveY, 0f);
         transform.position += movement * speed * Time.deltaTime;
     }
